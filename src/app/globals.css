@@ -1,0 +1,603 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Dental Clinic Design System (Legacy Reverted)
+   Modern, trustworthy, and calming color palette
+   ============================================ */
+
+@layer base {
+  :root {
+    /* Header Height Variable Defaults */
+    --header-height: 88px;
+    @media (max-width: 1024px) {
+      --header-height: 72px;
+    }
+    @media (max-width: 640px) {
+      --header-height: 64px;
+    }
+
+    /* --- SHADCN / BASE VARIABLES (HSL) --- */
+    --background: 210 40% 98%; /* Matching legacy background #f8fafc */
+    --foreground: 212 74% 34%; /* Matching legacy foreground #165197 */
+    --card: 0 0% 100%;
+    --card-foreground: 212 74% 34%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 74% 34%;
+    --primary: 212 74% 34%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 212 74% 34%;
+    --radius: 0.5rem;
+
+    /* --- BRAND COLOR SYSTEM (Legacy Revert) --- */
+
+    /* Primary Colors - Sky Blue (Dental Blue) */
+    --color-primary-50: #f0f7ff;
+    --color-primary-100: #e0effe;
+    --color-primary-200: #b9d9fc;
+    --color-primary-300: #7db6f9;
+    --color-primary-400: #3b91f4;
+    --color-primary-500: #165197; /* Main primary - Dental Blue */
+    --color-primary-600: #11427c;
+    --color-primary-700: #0d3361;
+    --color-primary-800: #092546;
+    --color-primary-900: #06182c;
+    --color-primary-950: #040f1c;
+
+    /* Secondary Colors - Soft Teal/Cyan */
+    --color-secondary-50: #f0fdfa;
+    --color-secondary-100: #ccfbf1;
+    --color-secondary-200: #99f6e4;
+    --color-secondary-300: #5eead4; /* Main accent */
+    --color-secondary-400: #2dd4bf;
+    --color-secondary-500: #14b8a6;
+    --color-secondary-600: #0d9488;
+    --color-secondary-700: #0f766e;
+    --color-secondary-800: #115e59;
+    --color-secondary-900: #134e4a;
+    --color-secondary-950: #042f2e;
+
+    /* Neutral Colors - Professional Blue-Greys */
+    --color-neutral-50: #f8fafc;
+    --color-neutral-100: #f1f5f9;
+    --color-neutral-200: #e2e8f0;
+    --color-neutral-300: #cbd5e1;
+    --color-neutral-400: #94a3b8;
+    --color-neutral-500: #64748b;
+    --color-neutral-600: #475569;
+    --color-neutral-700: #334155;
+    --color-neutral-800: #1e293b;
+    --color-neutral-900: #165197; /* Primary brand text */
+    --color-neutral-950: #0f172a;
+
+    /* Semantic Tokens */
+    --color-background: var(--color-neutral-50);
+    --color-background-secondary: #ffffff;
+    --color-background-muted: var(--color-neutral-100);
+
+    --color-foreground: var(--color-neutral-900);
+    --color-foreground-secondary: #2b6cb0;
+    --color-foreground-muted: #4a88cc;
+
+    --color-border: var(--color-neutral-200);
+    --color-border-hover: var(--color-neutral-300);
+
+    --color-input: var(--color-neutral-200);
+    --color-input-hover: var(--color-neutral-300);
+
+    --color-ring: var(--color-primary-500);
+
+    --color-destructive-50: #fef2f2;
+    --color-destructive-500: #ef4444;
+    --color-destructive-600: #dc2626;
+    --color-destructive-foreground: #ffffff;
+
+    --color-success-50: #f0fdf4;
+    --color-success-500: #22c55e;
+    --color-success-600: #16a34a;
+    --color-success-foreground: #ffffff;
+
+    --color-warning-50: #fffbeb;
+    --color-warning-500: #f59e0b;
+    --color-warning-600: #d97706;
+    --color-warning-foreground: #ffffff;
+
+    /* Radius Tokens */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg:
+      0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl:
+      0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... other dark mode vars if needed */
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height, 88px);
+  }
+  .main-content-offset {
+    padding-top: var(--header-height, 88px);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-outfit), system-ui, sans-serif;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+    min-height: 100dvh;
+    position: relative;
+  }
+}
+
+@layer components {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    --tw-ring-color: var(--color-ring);
+  }
+  .transition-smooth {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Legacy Animations Reverted */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+  }
+
+  @keyframes scroll {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      opacity: 0.5;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    }
+    50% {
+      opacity: 0.8;
+      box-shadow: 0 0 40px rgba(56, 189, 248, 0.5);
+    }
+  }
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  /* VideoHero Specific Animations */
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-slide-up {
+    animation: fadeSlideUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes floatArrow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes pulseGlowVideoHero {
+    0%,
+    100% {
+      opacity: 0.6;
+      filter: drop-shadow(0 0 10px rgba(22, 81, 151, 0.4));
+    }
+    50% {
+      opacity: 1;
+      filter: drop-shadow(0 0 20px rgba(74, 136, 204, 0.8));
+    }
+  }
+
+  .video-hero-scroll-indicator {
+    animation:
+      floatArrow 2.5s ease-in-out infinite,
+      pulseGlowVideoHero 2.5s ease-in-out infinite;
+  }
+
+  /* Mobile optimizations for animations */
+  @media (max-width: 767px) {
+    .animate-fade-slide-up,
+    .animate-fade-in-up {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .video-hero-scroll-indicator {
+      animation: none !important;
+      opacity: 0.7 !important;
+    }
+  }
+
+  /* Strapi Content Typography */
+  .strapi-content h1 {
+    @apply text-4xl font-bold mb-6;
+  }
+  .strapi-content h2 {
+    @apply text-3xl font-bold mb-4 mt-8;
+  }
+  .strapi-content h3 {
+    @apply text-2xl font-bold mb-4 mt-6;
+  }
+  .strapi-content p {
+    @apply mb-4 leading-relaxed text-foreground/80;
+  }
+  .strapi-content ul {
+    @apply list-disc list-inside mb-4 space-y-2;
+  }
+  .strapi-content ol {
+    @apply list-decimal list-inside mb-4 space-y-2;
+  }
+  .strapi-content img {
+    @apply rounded-lg my-8;
+  }
+  .strapi-content blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-6 text-foreground/70;
+  }
+}
+
+/* ============================================
+   GPU-Accelerated Animation System (Performance)
+   ============================================ */
+
+@keyframes kf-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-kf-fade-in {
+  animation: kf-fade-in 0.5s ease-out both;
+}
+
+/*
+ * EMBLA CAROUSEL HOVER FIX
+ * touch-pan-y (touch-action: pan-y) suppresses pointerover/mouseover events
+ * mid-motion on ALL pointer types, which breaks CSS :hover on desktop.
+ * Only apply it for coarse-pointer (touchscreen) devices.
+ */
+.embla-viewport {
+  touch-action: auto; /* default for fine pointer (mouse) */
+}
+@media (pointer: coarse) {
+  .embla-viewport {
+    touch-action: pan-y; /* re-enable vertical scroll lock on touch */
+  }
+}
+
+@keyframes kf-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-kf-scale-in {
+  animation: kf-scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes kf-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-kf-slide-up {
+  animation: kf-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes kf-slide-up-subtle {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-kf-slide-up-subtle {
+  animation: kf-slide-up-subtle 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes kf-menu-open {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-kf-menu-open {
+  animation: kf-menu-open 0.3s ease-out both;
+}
+
+@keyframes kf-blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+.animate-kf-blob {
+  animation: kf-blob 7s infinite alternate;
+}
+
+@keyframes kf-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.animate-kf-float {
+  animation: kf-float 6s ease-in-out infinite;
+}
+
+/* Service Page Floating Animations - Compositor-only (transform) */
+@keyframes kf-float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes kf-float-slower {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes kf-slide-x {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+/* Floating Contact System */
+@layer components {
+  @media (max-width: 768px) {
+    .floating-contact-system {
+      @apply right-4 bottom-4;
+    }
+    .floating-contact-system .floating-button {
+      @apply w-12 h-12;
+    }
+    .floating-contact-system .floating-gap {
+      @apply gap-2;
+    }
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .floating-button:focus-visible {
+    @apply ring-2 ring-white/50 ring-offset-2 ring-offset-transparent outline-none;
+  }
+}
+
+@layer utilities {
+  .shadow-floating-red {
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+  }
+  .shadow-floating-blue {
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  }
+  .shadow-floating-sky {
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+  }
+  .shadow-floating-yellow {
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+  }
+  .backdrop-blur-subtle {
+    backdrop-filter: blur(1px);
+  }
+
+  header nav a {
+    font-size: 18px !important;
+  }
+
+  /* Scroll-driven animation utilities for dental-implants procedure section */
+  .animate-in {
+    animation-fill-mode: both;
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+  }
+
+  .slide-in-from-bottom-4 {
+    animation-name: slideInFromBottom;
+  }
+
+  .duration-500 {
+    animation-duration: 500ms;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Hide Google reCAPTCHA badge */
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+/* ── Phase 3: content-visibility optimisation ────────────────────────────────
+ * Instructs the browser to skip paint and layout for off-screen sections.
+ * contain-intrinsic-size provides a size hint so the browser can calculate
+ * scroll position without rendering the section — prevents CLS and jank.
+ *
+ * Applied to every <section> element below the fold.
+ * P1/P2 sections (VideoHero, Services, Trust, Process, About) are near the
+ * top — the browser will render them regardless of contain-intrinsic-size.
+ * P3/P4 sections benefit the most from this CSS.
+ *
+ * content-visibility: auto is supported in all modern browsers (Chrome 85+,
+ * Edge 85+, Safari 15.4+, Firefox 109+). No polyfill needed; unsupported
+ * browsers simply render all sections immediately (safe fallback).
+ * ────────────────────────────────────────────────────────────────────────── */
+
+/* Generic section optimization — applies to all homepage sections */
+main > *,
+main section {
+  content-visibility: auto;
+  /* 
+   * contain-intrinsic-size: width height
+   * Width: auto (use actual element width)
+   * Height: estimated section height — used only while section is offscreen.
+   * Browser uses this to calculate scroll position without rendering the section.
+   * Approximate: 500px covers most sections at mobile; 700px at desktop.
+   * Slight over/under estimate has no visible CLS effect on modern browsers.
+   */
+  contain-intrinsic-size: auto 500px;
+}
+
+/* VideoHero is always visible — disable content-visibility to protect LCP element.
+ * .video-hero matches the actual className on VideoHero's <section>.
+ * main > :first-child is a structural fallback in case className changes. */
+.video-hero,
+main > :first-child {
+  content-visibility: visible !important;
+  contain-intrinsic-size: unset !important;
+}

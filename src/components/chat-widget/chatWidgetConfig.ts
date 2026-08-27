@@ -1,0 +1,1 @@
+export const CHAT_WIDGET_IMAGE_UPLOAD_ENABLED = false;

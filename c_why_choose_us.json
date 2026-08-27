@@ -1,0 +1,88 @@
+{
+  "__component": "dental-implants.why-choose-us",
+  "id": 40,
+  "badge": "Why Us",
+  "h2": "Why International Patients Choose Our Dental Clinic",
+  "subtitle": "We are a trusted destination for dental care in Ho Chi Minh City, offering high-quality treatment combined with a seamless experience for international patients",
+  "clinic_image": {
+    "id": 489,
+    "documentId": "op919aj84zoyl9an1g5mkgw0",
+    "name": "Why International Patients Choose Our Dental Clinic.jpg",
+    "alternativeText": null,
+    "caption": null,
+    "focalPoint": null,
+    "width": 592,
+    "height": 413,
+    "formats": {
+      "small": {
+        "ext": ".jpg",
+        "url": "/uploads/small_Why_International_Patients_Choose_Our_Dental_Clinic_031674ce0a.jpg",
+        "hash": "small_Why_International_Patients_Choose_Our_Dental_Clinic_031674ce0a",
+        "mime": "image/jpeg",
+        "name": "small_Why International Patients Choose Our Dental Clinic.jpg",
+        "path": null,
+        "size": 21.01,
+        "width": 500,
+        "height": 349,
+        "sizeInBytes": 21013
+      },
+      "thumbnail": {
+        "ext": ".jpg",
+        "url": "/uploads/thumbnail_Why_International_Patients_Choose_Our_Dental_Clinic_031674ce0a.jpg",
+        "hash": "thumbnail_Why_International_Patients_Choose_Our_Dental_Clinic_031674ce0a",
+        "mime": "image/jpeg",
+        "name": "thumbnail_Why International Patients Choose Our Dental Clinic.jpg",
+        "path": null,
+        "size": 6.73,
+        "width": 224,
+        "height": 156,
+        "sizeInBytes": 6726
+      }
+    },
+    "hash": "Why_International_Patients_Choose_Our_Dental_Clinic_031674ce0a",
+    "ext": ".jpg",
+    "mime": "image/jpeg",
+    "size": 26.46,
+    "url": "/uploads/Why_International_Patients_Choose_Our_Dental_Clinic_031674ce0a.jpg",
+    "previewUrl": null,
+    "provider": "local",
+    "provider_metadata": null,
+    "folderPath": "/12/38",
+    "createdAt": "2026-06-08T13:15:53.403Z",
+    "updatedAt": "2026-06-08T13:15:53.403Z",
+    "publishedAt": "2026-06-08T13:15:53.403Z",
+    "locale": null
+  },
+  "items": [
+    {
+      "id": 179,
+      "title": "Trusted by global patients",
+      "desc": "We have successfully treated patients from around the world such as the USA, Canada, Philippines, Singapore…, earning trust through consistent results and patient satisfaction.",
+      "icon": null
+    },
+    {
+      "id": 180,
+      "title": "Advanced implant technology",
+      "desc": "We use modern technologies such as CT Conbeam 3D scanning, guided implant surgery, and digital planning to ensure precise placement, safety, and long-lasting results.",
+      "icon": null
+    },
+    {
+      "id": 181,
+      "title": "Experienced, English-speaking dentists",
+      "desc": "Our skilled dental team communicates clearly in English, making the entire process comfortable and easy to understand.",
+      "icon": null
+    },
+    {
+      "id": 182,
+      "title": "Personalized care",
+      "desc": "Free consultation and personalized treatment planning based on your needs, goals, and oral condition.",
+      "icon": null
+    },
+    {
+      "id": 183,
+      "title": "Airport pick-up and hotel support",
+      "desc": "We provide convenient support services, including airport transfers and accommodation assistance, for a stress-free dental journey.",
+      "icon": null
+    }
+  ]
+}

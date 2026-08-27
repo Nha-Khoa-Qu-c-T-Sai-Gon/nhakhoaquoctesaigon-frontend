@@ -1,0 +1,42 @@
+export const MODEL_TAG_MAP: Record<string, string[]> = {
+  page: ["pages", "page"],
+  article: ["articles", "article"],
+  "bai-viet": ["articles", "bai-viet", "blogs"],
+  blog: ["blogs", "article"],
+  category: ["categories", "category"],
+  navigation: ["navigation"],
+  footer: ["footer"],
+  homepage: ["homepage"],
+  "about-page": ["about-page"],
+  customer: ["customer"],
+  "contact-page": ["contact-page"],
+  "contact-method": ["contact-methods"],
+  "dental-service": ["services-overview", "pages"],
+  "ai-chat-config": ["ai-chat-config"],
+  "dental-crowns": ["dental-crowns"],
+  "dental-veneers": ["dental-veneers"],
+  "dental-bleaching": ["dental-bleaching"],
+  "dental-braces": ["dental-braces"],
+  "dental-implants": ["dental-implants"],
+  "general-dentistry": ["general-dentistry"],
+};
+
+export const MODEL_PATH_MAP: Record<string, string[]> = {
+  page: ["/"],
+  article: ["/", "/news"],
+  "bai-viet": ["/", "/news"],
+  blog: ["/", "/news"],
+  "about-page": ["/about-us"],
+  customer: ["/customers"],
+  "contact-page": ["/contact"],
+  homepage: ["/"],
+  "contact-method": ["/"], // Revalidate all pages since floating contact appears on all pages
+  "dental-service": ["/", "/services"],
+  "ai-chat-config": ["/"], // Revalidate all pages since chat is globally present in layout
+  "dental-crowns": ["/services/dental-crowns"],
+  "dental-veneers": ["/services/dental-veneers"],
+  "dental-bleaching": ["/services/dental-bleaching"],
+  "dental-braces": ["/services/dental-braces"],
+  "dental-implants": ["/services/dental-implants"],
+  "general-dentistry": ["/services/general-and-preventive-dentistry"],
+};
